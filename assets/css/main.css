@@ -1,0 +1,758 @@
+/*Set all generic values, no margins, paddings, boorders*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/*Make all elements block elements*/
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/*Change to absence of list-style*/
+ol, ul {
+  list-style: none;
+}
+
+/*Reset all quotes to ''*/
+blockquote, q {
+  quotes: none;
+}
+blockquote:before, blockquote:after, q:before, q:after {
+  content: "";
+  content: none;
+}
+
+/*No more double borders and no space between borders*/
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/*No adjusting size of text*/
+body {
+  -webkit-text-size-adjust: none;
+}
+
+/*Set default highlighting to transparent*/
+mark {
+  background-color: transparent;
+  color: inherit;
+}
+
+/*Make focusing invisible*/
+input::-moz-focus-inner {
+  border: 0;
+  padding: 0;
+}
+
+/*Make inputs with no appearance*/
+input, select, textarea {
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+}
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Set core root defaults */
+html:focus-within {
+  scroll-behavior: smooth;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  text-rendering: optimizeSpeed;
+  line-height: 1.5;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+/* Remove all animations, transitions and smooth scroll for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+  html:focus-within {
+    scroll-behavior: auto;
+  }
+
+  *,
+*::before,
+*::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+@font-face {
+  font-family: "Bebas Neue";
+  src: url("../webfonts/Bebas_Neue/BebasNeue-Regular.ttf");
+}
+@font-face {
+  font-family: "Montserrat";
+  src: url("../webfonts/Montserrat/Montserrat-Regular.ttf");
+}
+@font-face {
+  font-family: "JetBrains Mono";
+  src: url("../webfonts/JetBrains_Mono/JetBrainsMono-VariableFont_wght.ttf");
+}
+html {
+  font-size: 30px;
+}
+@media screen and (max-width: 1920px) {
+  html {
+    font-size: 20px;
+  }
+}
+@media screen and (max-width: 1280px) {
+  html {
+    font-size: 16px;
+  }
+}
+@media screen and (max-width: 1152px) {
+  html {
+    font-size: 14px;
+  }
+}
+
+body {
+  background-color: #ffffff;
+  color: #000000;
+}
+
+body, input, select, textarea {
+  color: #000000;
+  font-family: "Montserrat", Helvetica, sans-serif;
+  font-size: 1rem;
+  font-weight: 400;
+  letter-spacing: 0.025em;
+  line-height: 2;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  border-bottom: dotted 1px;
+}
+a:hover {
+  text-decoration: none;
+  border-bottom-color: transparent;
+}
+
+strong, b {
+  font-weight: 600;
+  color: #000000;
+}
+
+em, i {
+  font-style: italic;
+}
+
+p {
+  margin: 0 0 2rem 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Bebas Neue", Helvetica, cursive;
+  font-weight: 500;
+  letter-spacing: 0.025em;
+  line-height: 1.75;
+  margin: 0 0 1.5rem 0;
+  text-transform: uppercase;
+}
+h1 a, h2 a, h3 a, h4 a, h5 a, h6 a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1 {
+  font-size: 5rem;
+  font-weight: 700;
+  line-height: 1.1;
+  margin: 0 0 1.5rem 0;
+  text-transform: none;
+}
+
+h2 {
+  font-size: 3rem;
+  font-weight: 800;
+  margin: 0 0 2rem 0;
+}
+
+h3 {
+  font-size: 0.875rem;
+}
+
+h4 {
+  font-size: 0.875rem;
+}
+
+h5 {
+  font-size: 0.75rem;
+}
+
+h6 {
+  font-size: 0.625rem;
+}
+
+sub {
+  font-size: 0.8rem;
+  position: relative;
+  top: 0.5rem;
+}
+
+sup {
+  font-size: 0.8rem;
+  position: relative;
+  top: -0.5rem;
+}
+
+blockquote {
+  border-left: solid 0.5rem rgba(144, 144, 144, 0.25);
+  font-style: italic;
+  margin: 0 0 2rem 0;
+  padding: 1rem 0 1rem 2rem;
+}
+
+code {
+  background: rgba(144, 144, 144, 0.1);
+  border-radius: 0.325rem;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  margin: 0 0.25rem;
+  padding: 0.25rem 0.65rem;
+}
+
+pre {
+  -webkit-overflow-scrolling: touch;
+  font-family: "JetBrains Mono", monospace;
+  font-size: 0.9rem;
+  margin: 0 0 2rem 0;
+  width: 100%;
+}
+pre code {
+  display: block;
+  line-height: 1.75;
+  padding: 1rem 1.5rem;
+  overflow-x: auto;
+}
+
+hr {
+  border: 0;
+  border-bottom: solid 2px rgba(144, 144, 144, 0.25);
+  margin: 3rem 0;
+}
+hr.major {
+  margin: 5rem 0;
+}
+@media screen and (max-width: 736px) {
+  hr.major {
+    margin: 3rem 0;
+  }
+}
+
+.whole-page {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+  flex: 0 1 auto;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  padding-bottom: 1rem;
+}
+
+#pic-name {
+  background-image: url("../../images/lilac-breasted-roller.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+  text-indent: 10vw;
+  width: 100%;
+  height: 75%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+}
+#pic-name h1 {
+  color: #ffffff;
+  font-size: 8rem;
+}
+#pic-name p {
+  color: #ffffff;
+  font-size: 2rem;
+}
+
+#about-me {
+  text-align: center;
+  width: 50%;
+  margin: auto;
+}
+
+#education {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 1 auto;
+}
+
+#ed-time {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+}
+#ed-time:hover .ed-item {
+  height: 10%;
+}
+
+.ed-item {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  height: 50%;
+  width: 100%;
+  color: #ffffff;
+  overflow: hidden;
+  transition: height 1s ease;
+}
+.ed-item:before, .ed-item:after {
+  transform: translate3d(0, 0, 0);
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+.ed-item:after {
+  background: rgba(61, 83, 158, 0.7);
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+.ed-item:before {
+  background: linear-gradient(to bottom, rgba(0, 0, 0, 0) 0%, rgba(0, 0, 0, 0.5) 75%);
+  z-index: 1;
+  opacity: 0;
+  transform: translate3d(0, 0, 0) translateY(50%);
+  transition: opacity 1s ease, transform 1s ease;
+}
+.ed-item:hover {
+  height: 90% !important;
+}
+.ed-item:hover:after {
+  opacity: 0;
+}
+.ed-item:hover:before {
+  opacity: 1;
+  transform: translate3d(0, 0, 0) translateY(0);
+  transition: opacity 1s ease, transform 1s ease 0.25s;
+}
+.ed-item:hover .ed-content {
+  opacity: 1;
+  transform: translateY(0);
+  transition: all 1s ease 0.5s;
+}
+.ed-item:hover .ed-bg {
+  filter: grayscale(50%);
+}
+
+.ed-content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 1.618rem;
+  top: 55%;
+  opacity: 0;
+}
+
+.ed-name {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 1;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.ed-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background-size: cover;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
+
+#gt-ed .ed-bg {
+  background-image: url("../../images/gt-school.jpg");
+  background-position: top 15% center;
+}
+
+#tj-ed .ed-bg {
+  background-image: url("../../images/tj-school.jpg");
+  background-position: bottom 15% center;
+}
+
+#extra {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 1 auto;
+}
+
+#activities {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.activity {
+  width: 20rem;
+  height: 20rem;
+  margin: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 2rem;
+  color: #ffffff;
+  position: relative;
+  cursor: pointer;
+}
+.activity:after {
+  transform: translate3d(0, 0, 0);
+  content: "";
+  position: absolute;
+  border-radius: inherit;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(117, 192, 196, 0.6);
+  opacity: 1;
+  transition: opacity 1s ease;
+}
+.activity:hover:after {
+  opacity: 0;
+}
+.activity:hover .activity-bg {
+  filter: grayscale(50%);
+}
+
+.activity-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  border: #75C0C4 solid 3px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
+
+.activity-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 1;
+  font-size: 2rem;
+  width: 100%;
+}
+
+#extra-gallery {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 4rem;
+  overflow: auto;
+  background-color: #000000;
+  background-color: #00000099;
+}
+
+.gallery-content {
+  background-color: #000000;
+  color: #ffffff;
+  padding: 2rem;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+
+.words-pics {
+  display: flex;
+  flex-direction: column;
+  flex: 2 2 0px;
+}
+
+#extra-gallery-picture {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  flex: 3 3 0px;
+  transition: opacity 1.5s ease-out;
+}
+
+#extra-gallery-picture.fade {
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}
+
+#personal {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 1 auto;
+}
+
+#project {
+  width: 100%;
+  height: 100%;
+}
+
+#project-bubbles {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+
+#awards-honors {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 1 auto;
+}
+
+#awho-section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#awho-header {
+  z-index: 5;
+}
+
+#awho-canvas:hover {
+  cursor: none;
+}
+
+#magnifier {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 1;
+  border: 1px solid #E89251;
+  pointer-events: none;
+  background-color: #ffffff;
+  transform: translate3d(-50%, -50%, 0);
+  transition: transform 1s cubic-bezier(0.02, 1.23, 0.79, 1.08);
+}
+
+#contact {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 1 auto;
+}
+
+#contact-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  flex: 0 1 auto;
+}
+
+#contact-image {
+  flex: 1 1 auto;
+  width: 50%;
+  height: 100%;
+  background-image: url("../../images/lilac-breasted-roller.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#contact-me {
+  flex: 1 1 auto;
+  width: 50%;
+  height: 100%;
+  padding: 0 2rem 0 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#contact-name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#first-name {
+  width: 100%;
+  display: flex;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+#last-name {
+  width: 100%;
+  display: flex;
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+#email {
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+#message {
+  height: 100%;
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+  resize: none;
+}
+
+#socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-image {
+  height: 4rem;
+  width: 4rem;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.social-link {
+  border: none;
+}
+
+#mail:hover {
+  cursor: pointer;
+}
+
+.contact-text {
+  border: solid 1px #000000;
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+}
+
+#copy-email {
+  opacity: 0;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  margin: 1rem;
+  padding: 0.5rem 0.5rem 0.5rem 0.5rem;
+  background-color: #75C0C4;
+  transition: opacity 0.5s ease;
+  color: #ffffff;
+  border-radius: 0.5rem;
+}
+
+#contact-submit {
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  width: 6rem;
+  border: none;
+  border: 1px solid rgba(61, 83, 158, 0.625);
+  background-color: #ffffff;
+  color: rgba(61, 83, 158, 0.625);
+}
+
+.nav-bar {
+  height: 4rem;
+  width: 100%;
+}
+
+.nav-bar-nav {
+  height: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 2rem 0 2rem;
+}
+
+.nav-item {
+  margin: 0.5rem;
+  border-radius: 0.5rem;
+}
+.nav-item:hover {
+  background-color: #E89251;
+  color: #ffffff;
+}
+
+.nav-link {
+  padding: 0 0.375rem 0 0.375rem;
+  border: none;
+  color: inherit;
+}
+
+.active {
+  background-color: #E89251;
+  color: #ffffff;
+}
+
+/*# sourceMappingURL=main.css.map */

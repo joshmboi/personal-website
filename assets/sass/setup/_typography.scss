@@ -1,0 +1,164 @@
+@use '../lib/vars';
+@use '../lib/funcs';
+@use '../lib/breakpoints';
+
+
+//Typography
+
+	html {
+		font-size: 30px;
+
+		@include breakpoints.breakpoint('<=xlarge') {
+			font-size: 20px;
+		}
+
+		@include breakpoints.breakpoint('<=large') {
+			font-size: 16px;
+		}
+
+		@include breakpoints.breakpoint('<=medium') {
+			font-size: 14px;
+		}
+
+	}
+
+	body {
+		background-color: funcs.palette(bg);
+		color: funcs.palette(fg);
+	}
+
+	body, input, select, textarea {
+		color: funcs.palette(fg-bold);
+		font-family: funcs.font(family);
+		font-size: 1rem;
+		font-weight: funcs.font(weight);
+		letter-spacing: funcs.font(kerning);
+		line-height: 2;
+	}
+
+	a {
+		text-decoration: none;
+		color: funcs.palette(fg-bold);
+		border-bottom: dotted 1px;
+
+		&:hover {
+			text-decoration: none;
+			border-bottom-color: transparent;
+		}
+	}
+
+	strong, b {
+		font-weight: funcs.font(weight-bold);
+		color: funcs.palette(fg-bold);
+	}
+
+	em, i {
+		font-style: italic;
+	}
+
+	p {
+		margin: 0 0 funcs.size(element-margin) 0;
+	}
+
+	h1, h2, h3, h4, h5, h6 {
+		font-family: funcs.font(family-heading);
+		font-weight: funcs.font(weight-heading-light);
+		letter-spacing: funcs.font(kerning-heading);
+		line-height: 1.75;
+		margin: 0 0 (funcs.size(element-margin) * 0.75) 0;
+		text-transform: uppercase;
+
+		a {
+			color: inherit;
+			text-decoration: none;
+		}
+	}
+
+	h1 {
+		font-size: 5rem;
+		font-weight: funcs.font(weight-extrabold);
+		line-height: 1.1;
+		margin: 0 0 (funcs.size(element-margin) * 0.75) 0;
+		text-transform: none;
+	}
+
+	h2 {
+		font-size: 3rem;
+		font-weight: funcs.font(weight-heading);
+		margin: 0 0 funcs.size(element-margin) 0;
+	}
+
+	h3 {
+		font-size: 0.875rem;
+	}
+
+	h4 {
+		font-size: 0.875rem;
+	}
+
+	h5 {
+		font-size: 0.75rem;
+	}
+
+	h6 {
+		font-size: 0.625rem;
+	}
+
+	sub {
+		font-size: 0.8rem;
+		position: relative;
+		top: 0.5rem;
+	}
+
+	sup {
+		font-size: 0.8rem;
+		position: relative;
+		top: -0.5rem;
+	}
+
+	blockquote {
+		border-left: solid 0.5rem funcs.palette(border);
+		font-style: italic;
+		margin: 0 0 funcs.size(element-margin) 0;
+		padding: (funcs.size(element-margin) * 0.5) 0 (funcs.size(element-margin) * 0.5) funcs.size(element-margin);
+	}
+
+	code {
+		background: funcs.palette(border-bg);
+		border-radius: funcs.size(border-radius);
+		font-family: funcs.font(family-fixed);
+		font-size: 0.9rem;
+		margin: 0 0.25rem;
+		padding: 0.25rem 0.65rem;
+	}
+
+	pre {
+		-webkit-overflow-scrolling: touch;
+		font-family: funcs.font(family-fixed);
+		font-size: 0.9rem;
+		margin: 0 0 funcs.size(element-margin) 0;
+		width: 100%;
+
+		code {
+			display: block;
+			line-height: 1.75;
+			padding: 1rem 1.5rem;
+			overflow-x: auto;
+		}
+	}
+
+	hr {
+		border: 0;
+		border-bottom: solid 2px map-get(vars.$palette, border);
+		margin: (funcs.size(element-margin) * 1.5) 0;
+
+		&.major {
+			margin: (funcs.size(element-margin) * 2.5) 0;
+		}
+
+		@include breakpoints.breakpoint('<=small') {
+			&.major {
+				margin: (funcs.size(element-margin) * 1.5) 0;
+			}
+		}
+	}

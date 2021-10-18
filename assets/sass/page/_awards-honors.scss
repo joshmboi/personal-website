@@ -1,0 +1,40 @@
+@use '../lib/funcs';
+
+#awards-honors {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 1 auto;
+}
+
+#awho-section {
+  height: 100%;
+  width: 100%;
+  position: relative;
+}
+
+#awho-header {
+  z-index: 5;
+}
+
+#awho-canvas {
+  &:hover {
+    cursor: none;
+  }
+}
+
+#magnifier {
+  width: 16rem;
+  height: 16rem;
+  border-radius: 50%;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  opacity: 1;
+  border: 1px solid funcs.palette(primary-light);
+  pointer-events: none;
+  background-color: funcs.palette(bg);
+
+  transform: translate3d(-50%, -50%, 0);
+  transition: transform 1s cubic-bezier(.02, 1.23, .79, 1.08);
+}

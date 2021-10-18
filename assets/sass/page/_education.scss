@@ -1,0 +1,121 @@
+@use '../lib/funcs';
+
+#education {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  flex: 0 1 auto;
+}
+
+#ed-time {
+  display: flex;
+  flex-direction: column;
+  flex: 1 1 auto;
+
+  &:hover {
+    .ed-item {
+      height: 10%;
+    }
+  }
+}
+
+.ed-item {
+  transform: translate3d(0, 0, 0);
+  position: relative;
+  height: 50%;
+  width: 100%;
+  color: funcs.palette(bg);
+  overflow: hidden;
+  transition: height 1s ease;
+
+  &:before, &:after {
+    transform: translate3d(0, 0, 0);
+    content: '';
+    position: absolute;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+  }
+
+  &:after {
+    background: transparentize(funcs.palette(secondary-2-light), 0.30);
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
+  &:before {
+    background: linear-gradient(to bottom, rgba(0,0,0,0) 0%,rgba(0,0,0,0.5) 75%);
+    z-index: 1;
+    opacity: 0;
+    transform: translate3d(0, 0, 0) translateY(50%);
+    transition: opacity 1s ease, transform 1s ease;
+  }
+
+  &:hover {
+    height: 90% !important;
+
+    &:after {
+      opacity: 0;
+    }
+
+    &:before {
+      opacity: 1;
+      transform: translate3d(0, 0, 0) translateY(0);
+      transition: opacity 1s ease, transform 1s ease 0.25s;
+    }
+
+    .ed-content {
+      opacity: 1;
+      transform: translateY(0);
+      transition: all 1s ease 0.5s;
+    }
+
+    .ed-bg {
+      filter: grayscale(50%);
+    }
+
+  }
+}
+
+.ed-content {
+  transform: translate3d(0, 0, 0) translateY(25px);
+  position: relative;
+  z-index: 1;
+  text-align: center;
+  margin: 0 1.618rem;
+  top: 55%;
+  opacity: 0;
+}
+
+.ed-name {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 1;
+  font-size: 2rem;
+  width: 100%;
+}
+
+.ed-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%; height: 100%;
+  top: 0; left: 0;
+  background-size: cover;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
+
+#gt-ed {
+  .ed-bg {
+    background-image: url('../../images/gt-school.jpg');
+    background-position: top 15% center;
+  }
+}
+
+#tj-ed {
+  .ed-bg {
+    background-image: url('../../images/tj-school.jpg');
+    background-position: bottom 15% center;
+  }
+}

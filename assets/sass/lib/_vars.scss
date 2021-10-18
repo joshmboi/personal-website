@@ -1,0 +1,49 @@
+@use 'sass:map';
+
+//Sizes
+	$size: (
+		'border-radius':			0.325rem,
+		'element-height':			3rem,
+		'element-margin':			2rem,
+		'header-width':				25rem,
+		'subheader-width':			22rem,
+		'content-width':			60rem,
+		'line-width':				2px,
+		'form-gutter':				2rem,
+		'gallery-gutter':			1.25rem,
+	);
+
+//Fonts
+	$font: (
+		'family':					('Montserrat', Helvetica, sans-serif),
+		'family-fixed':				('JetBrains Mono', monospace),
+		'family-heading':			('Bebas Neue', Helvetica, cursive),
+		'weight':					400,
+		'weight-bold':				600,
+		'weight-extrabold':			700,
+		'weight-heading':			800,
+		'weight-heading-light':		500,
+		'kerning':					0.025em,
+		'kerning-heading':			0.025em,
+	);
+
+//Color Palette
+	$palette: (
+		'bg':						#ffffff,
+		'bg-dark':					#cccccc,
+		'fg':						#000000,
+		'fg-bold':					#000000,
+		'fg-light':					rgba(0,0,0,0.25),
+		'border':					rgba(144,144,144,0.25),
+		'border-bg':				rgba(144,144,144,0.1),
+		'accent':					#49fcd4,
+		'accent-border':			desaturate(darken(#49fcd4, 8), 30),
+		'accent-alt':				desaturate(darken(#49fcd4, 10), 20),
+		'accent-bg':				transparentize(#49fcd4, 0.75),
+		'primary-light': 			#E89251,
+		'primary-dark':				#A26638,
+		'secondary-1-light':		#75C0C4,
+		'secondary-1-dark':			#518689,
+		'secondary-2-light':		#3D539E,
+		'secondary-2-dark':			#2A3A6E,
+	);
