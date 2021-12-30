@@ -1,2 +1,2 @@
 # personal-website
-My process in programming my personal website using pure javascript, css, and html
+This is my effort to learn CSS, JavaScript, and HTML, as well as demonstrate my understanding of these concepts.
