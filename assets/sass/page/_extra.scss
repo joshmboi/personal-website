@@ -88,7 +88,7 @@
   background-color: #00000099;
 }
 
-.gallery-content {
+#gallery-content {
   background-color: funcs.palette(fg);
   color: funcs.palette(bg);
   padding: 2rem;
@@ -97,14 +97,15 @@
   flex-direction: row;
 }
 
-.words-pics {
+#words-pics {
   display: flex;
   flex-direction: column;
   flex: 2 2 0px;
+  width: 40%;
 }
 
 #extra-gallery-picture {
-  width: 100%;
+  width: 60%;
   height: 100%;
   object-fit: cover;
   object-position: center;

@@ -37,8 +37,8 @@ function setupCanvas(boundary, canvas, canvasFontSize, dpr, magPower) {
 function drawText(ctx, pageFontSize, dpr) {
   ctx.clearRect(0, 0, ctx.width, ctx.height);
   ctx.font = pageFontSize * dpr / 2 + 'px Montserrat';
-  const numRows = 2;
-  const awhos = ['Aerospace Engineering Honor Society (Sigma Gamma Tau)', 'Faculty Honors All Semesters', 'achievement 4', 'special accomplishment', 'oops can\'t count', 'arghhh'];
+  const numRows = 1;
+  const awhos = ['Aerospace Engineering Honor Society', 'Faculty Honors All Semesters', 'National Merit Scholar'];
   var vertSpacing = ctx.canvas.height/(numRows + 1);
   var vertPosition = vertSpacing;
   var horizSpacing;

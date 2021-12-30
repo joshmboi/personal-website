@@ -326,8 +326,9 @@ hr.major {
 
 #about-me {
   text-align: center;
-  width: 50%;
+  width: 80%;
   margin: auto;
+  line-height: 1.5em;
 }
 
 #education {
@@ -524,7 +525,7 @@ hr.major {
   background-color: #00000099;
 }
 
-.gallery-content {
+#gallery-content {
   background-color: #000000;
   color: #ffffff;
   padding: 2rem;
@@ -533,14 +534,15 @@ hr.major {
   flex-direction: row;
 }
 
-.words-pics {
+#words-pics {
   display: flex;
   flex-direction: column;
   flex: 2 2 0px;
+  width: 40%;
 }
 
 #extra-gallery-picture {
-  width: 100%;
+  width: 60%;
   height: 100%;
   object-fit: cover;
   object-position: center;
@@ -625,12 +627,28 @@ hr.major {
   flex: 0 1 auto;
 }
 
+#contact-content-gh {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  height: 100%;
+  flex: 0 1 auto;
+}
+
 #contact-image {
   flex: 1 1 auto;
   width: 50%;
   height: 100%;
   background-image: url("../../images/lilac-breasted-roller.jpg");
   background-position: center;
+  background-size: cover;
+}
+
+#contact-image-gh {
+  flex: 1 1 auto;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../images/lilac-breasted-roller.jpg");
   background-size: cover;
 }
 
@@ -677,6 +695,12 @@ hr.major {
 #socials {
   display: flex;
   flex-direction: row;
+}
+
+#socials-gh {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
 }
 
 .contact-image {
