@@ -1,0 +1,85 @@
+@use "../../assets/sass/lib/funcs";
+
+.activity {
+  width: 20rem;
+  height: 20rem;
+  margin: 2rem;
+  border-radius: 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  cursor: pointer;
+}
+
+.activity-button {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  border-radius: inherit;
+  align-items: center;
+  justify-content: center;
+  color: funcs.palette(bg);
+
+  &:after {
+    transform: translate3d(0, 0, 0);
+    content: "";
+    position: absolute;
+    border-radius: inherit;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background: transparentize(funcs.palette(secondary-1-light), 0.4);
+    opacity: 1;
+    transition: opacity 1s ease;
+  }
+
+  &:hover {
+    &:after {
+      opacity: 0;
+    }
+
+    .activity-bg {
+      filter: grayscale(50%);
+    }
+  }
+}
+
+.activity-bg {
+  transform: translate3d(0, 0, 0);
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: inherit;
+  border: funcs.palette(secondary-1-light) solid 3px;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  transition: filter 0.5s ease;
+  filter: grayscale(100%);
+}
+
+.activity-text {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  text-align: center;
+  z-index: 1;
+  font-size: 2rem;
+  width: 100%;
+}
+
+#yjsp {
+  background-image: url("../../assets/images/yjsp/yjsp.jpg");
+}
+
+#proj {
+  background-image: url("../../assets/images/proj/proj.jpg");
+}
+
+#gtweb {
+  background-image: url("../../assets/images/gtweb/gtweb.jpg");
+}

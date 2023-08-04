@@ -1,0 +1,47 @@
+// Removes a specific item from a list.
+// @author Hugo Giraudel
+// @param {list} $list List.
+// @param {integer} $index Index.
+// @return {list} Updated list.
+@use 'vars';
+
+
+// Gets a value from a map.
+// @author Hugo Giraudel
+// @param {map} $map Map.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function val($map, $keys...) {
+
+	@if nth($keys, 1) == null {
+		$keys: remove-nth($keys, 1);
+	}
+
+	@each $key in $keys {
+		$map: map-get($map, $key);
+	}
+
+	@return $map;
+
+}
+
+// Gets a font value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function font($keys...) {
+	@return val(vars.$font, $keys...);
+}
+
+// Gets a palette value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function palette($keys...) {
+	@return val(vars.$palette, $keys...);
+}
+
+// Gets a size value.
+// @param {string} $keys Key(s).
+// @return {string} Value.
+@function size($keys...) {
+	@return val(vars.$size, $keys...);
+}

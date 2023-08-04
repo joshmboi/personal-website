@@ -1,0 +1,118 @@
+@use "../../assets/sass/lib/funcs";
+
+#contact-content {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+  flex: 0 1 auto;
+}
+
+#contact-form-and-socials {
+  display: flex;
+  flex-direction: column;
+  flex: 0 1 auto;
+  width: 50%;
+  height: 100%;
+  padding: 0 2rem 0 2rem;
+  align-items: center;
+}
+
+#contact-image {
+  flex: 1 1 auto;
+  width: 50%;
+  height: 100%;
+  background-image: url("../../assets/images/lilac-breasted-roller.jpg");
+  background-position: center;
+  background-size: cover;
+}
+
+#contact-me {
+  flex: 1 1 auto;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: opacity 0.5s ease;
+}
+
+#contact-name {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+}
+
+#first-name {
+  width: 100%;
+  display: flex;
+  margin: 0 0.5rem 0.5rem 0;
+}
+
+#last-name {
+  width: 100%;
+  display: flex;
+  margin: 0 0 0.5rem 0.5rem;
+}
+
+#email {
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+}
+
+#message {
+  height: 100%;
+  width: 100%;
+  margin: 0.5rem 0 0.5rem 0;
+  resize: none;
+}
+
+#socials {
+  display: flex;
+  flex-direction: row;
+}
+
+.contact-image {
+  height: 4rem;
+  width: 4rem;
+  margin: 0.5rem 0.5rem 0 0.5rem;
+}
+
+.social-link {
+  border: none;
+}
+
+#mail:hover {
+  cursor: pointer;
+}
+
+.contact-text {
+  border: solid 1px funcs.palette(fg);
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+}
+
+#contact-submit {
+  border-radius: 0.5rem;
+  font-size: 0.75rem;
+  width: 6rem;
+  border: none;
+  border: 1px solid transparentize(funcs.palette(secondary-2-light), 0.375);
+  background-color: funcs.palette(bg);
+  color: transparentize(funcs.palette(secondary-2-light), 0.375);
+}
+
+.copy-mail {
+  background-color: funcs.palette(bg);
+  border: none;
+}
+
+#hidden-email-iframe {
+  display: none;
+}
+
+#submission-success {
+  opacity: 0;
+  transition: opacity 0.75s ease;
+  position: absolute;
+  top: 50%;
+}

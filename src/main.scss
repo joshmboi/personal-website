@@ -1,0 +1,10 @@
+//Library
+  @use 'assets/sass/lib/vars';
+  @use 'assets/sass/lib/funcs';
+  @use 'assets/sass/lib/mixins';
+  @use 'assets/sass/lib/breakpoints';
+
+//Setup
+  @use 'assets/sass/setup/reset';
+  @use 'assets/sass/setup/fonts';
+  @use 'assets/sass/setup/typography';

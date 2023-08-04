@@ -1,0 +1,11 @@
+{
+  "kernels": ["ResizeNearestNeighbor", "Reshape"],
+  "backends": [
+      "cpu"
+  ],
+  "models": [
+      "./src/assets/model/model.json"
+  ],
+  "outputPath": "./src/assets/tfjs-model",
+  "forwardModeOnly": true
+}

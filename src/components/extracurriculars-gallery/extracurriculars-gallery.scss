@@ -1,0 +1,46 @@
+@use "../../assets/sass/lib/funcs";
+
+#extra-gallery {
+  display: none;
+  position: fixed;
+  z-index: 2;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100vh;
+  padding: 4rem;
+  overflow: auto;
+  background-color: #000000;
+  background-color: #00000099;
+}
+
+#gallery-content {
+  background-color: funcs.palette(fg);
+  color: funcs.palette(bg);
+  padding: 2rem;
+  display: flex;
+  height: 100%;
+  flex-direction: row;
+}
+
+#words-pics {
+  display: flex;
+  flex-direction: column;
+  flex: 2 2 0px;
+  width: 40%;
+}
+
+#extra-gallery-picture {
+  width: 60%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+  opacity: 1;
+  flex: 3 3 0px;
+  transition: opacity 1.5s ease-out;
+}
+
+#extra-gallery-picture.fade {
+  opacity: 0;
+  transition: opacity 1.5s ease-in;
+}

@@ -1,0 +1,45 @@
+{
+    "compilerOptions": {
+      "exactOptionalPropertyTypes": true,
+      "noFallthroughCasesInSwitch": true,
+      "noImplicitAny": true,
+      "noImplicitOverride": true,
+      "noImplicitReturns": true,
+      "noImplicitThis": true,
+      "noUnusedLocals": true,
+      "noUnusedParameters": true,
+      "strict": true,
+
+      "baseUrl": ".",
+      "module": "CommonJS",
+      "moduleResolution": "node",
+      "resolveJsonModule": true,
+      "rootDir": ".",
+
+      "inlineSourceMap": false,
+      "declarationMap": false,
+      "noEmit": true,
+
+      "allowJs": true,
+      "allowSyntheticDefaultImports": true,
+      "esModuleInterop": true,
+      "forceConsistentCasingInFileNames": true,
+      "isolatedModules": true,
+
+      "jsx": "react-jsx",
+      "target": "ES5",
+
+      "incremental": true,
+
+      "pretty": true,
+
+      "skipLibCheck": true,
+
+      "types": [
+        "node",
+        "webpack-env",
+      ]
+    },
+    "include": ["src/**/*", "tests/**/*", "machine-learning"],
+    "exclude": ["node_modules", "dist"],
+}
