@@ -822,11 +822,11 @@ var __webpack_exports__ = {};
 (() => {
 "use strict";
 
-// EXTERNAL MODULE: ./node_modules/react-dom/client.js
-var client = __webpack_require__(470);
 // EXTERNAL MODULE: ./node_modules/react/index.js
 var react = __webpack_require__(526);
 var react_namespaceObject = /*#__PURE__*/__webpack_require__.t(react, 2);
+// EXTERNAL MODULE: ./node_modules/react-dom/client.js
+var client = __webpack_require__(470);
 ;// CONCATENATED MODULE: ./node_modules/@remix-run/router/dist/router.js
 /**
  * @remix-run/router v1.7.1
@@ -7260,7 +7260,7 @@ function ContactEmail(_ref){var copiedMailRef=_ref.copiedMailRef;return/*#__PURE
 ;// CONCATENATED MODULE: ./src/components/contact/contact.tsx
 function Contact(){var copiedMailRef=(0,react.useRef)(null);return/*#__PURE__*/(0,jsx_runtime.jsxs)("section",{id:"page-wrap",children:[/*#__PURE__*/(0,jsx_runtime.jsx)("h1",{children:"Contact Me"}),/*#__PURE__*/(0,jsx_runtime.jsx)(ContactContent,{copiedMailRef:copiedMailRef}),/*#__PURE__*/(0,jsx_runtime.jsx)(ContactEmail,{copiedMailRef:copiedMailRef})]});}
 ;// CONCATENATED MODULE: ./src/index.tsx
-var router=createHashRouter([{path:"/",element:/*#__PURE__*/(0,jsx_runtime.jsx)(App,{}),children:[{path:"",element:/*#__PURE__*/(0,jsx_runtime.jsx)(Home,{})},{path:"education",element:/*#__PURE__*/(0,jsx_runtime.jsx)(Education,{})},{path:"extracurriculars",element:/*#__PURE__*/(0,jsx_runtime.jsx)(Extracurriculars,{})},{path:"awards-and-honors",element:/*#__PURE__*/(0,jsx_runtime.jsx)(AwardsAndHonors,{})},{path:"contact-me",element:/*#__PURE__*/(0,jsx_runtime.jsx)(Contact,{})}]}]);var domNode=document.getElementById("root");if(domNode!==null){var root=(0,client/* createRoot */.s)(domNode);root.render(/*#__PURE__*/(0,jsx_runtime.jsx)(RouterProvider,{router:router}));}
+var router=createHashRouter([{path:"/",element:/*#__PURE__*/(0,jsx_runtime.jsx)(App,{}),children:[{path:"",element:/*#__PURE__*/(0,jsx_runtime.jsx)(Home,{})},{path:"education",element:/*#__PURE__*/(0,jsx_runtime.jsx)(Education,{})},{path:"extracurriculars",element:/*#__PURE__*/(0,jsx_runtime.jsx)(Extracurriculars,{})},{path:"awards-and-honors",element:/*#__PURE__*/(0,jsx_runtime.jsx)(AwardsAndHonors,{})},{path:"contact-me",element:/*#__PURE__*/(0,jsx_runtime.jsx)(Contact,{})}]}]);var domNode=document.getElementById("root");if(domNode!==null){var root=(0,client/* createRoot */.s)(domNode);root.render(/*#__PURE__*/(0,jsx_runtime.jsx)(react.StrictMode,{children:/*#__PURE__*/(0,jsx_runtime.jsx)(RouterProvider,{router:router})}));}
 })();
 
 /******/ })()
