@@ -7129,7 +7129,7 @@ function NavItem(_ref){var destination=_ref.destination,pageName=_ref.pageName;r
 // extracted by mini-css-extract-plugin
 
 ;// CONCATENATED MODULE: ./src/components/nav-bar-nav/nav-bar-nav.tsx
-function NavBarNav(){return/*#__PURE__*/(0,jsx_runtime.jsxs)("ul",{className:"nav-bar-nav",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(NavItem,{destination:"/",pageName:"Home"}),/*#__PURE__*/(0,jsx_runtime.jsx)(NavItem,{destination:"/education",pageName:"Education"}),/*#__PURE__*/(0,jsx_runtime.jsx)(NavItem,{destination:"/extracurriculars",pageName:"Extracurriculars"}),/*#__PURE__*/(0,jsx_runtime.jsx)(NavItem,{destination:"/awards-and-honors",pageName:"Awards and Honors"}),/*#__PURE__*/(0,jsx_runtime.jsx)(NavItem,{destination:"/contact-me",pageName:"Contact Me"})]});}
+function NavBarNav(){return/*#__PURE__*/(0,jsx_runtime.jsxs)("ul",{className:"nav-bar-nav",children:[/*#__PURE__*/(0,jsx_runtime.jsx)(NavItem,{destination:"#/",pageName:"Home"}),/*#__PURE__*/(0,jsx_runtime.jsx)(NavItem,{destination:"#/education",pageName:"Education"}),/*#__PURE__*/(0,jsx_runtime.jsx)(NavItem,{destination:"#/extracurriculars",pageName:"Extracurriculars"}),/*#__PURE__*/(0,jsx_runtime.jsx)(NavItem,{destination:"#/awards-and-honors",pageName:"Awards and Honors"}),/*#__PURE__*/(0,jsx_runtime.jsx)(NavItem,{destination:"#/contact-me",pageName:"Contact Me"})]});}
 ;// CONCATENATED MODULE: ./src/components/nav-bar/nav-bar.scss
 // extracted by mini-css-extract-plugin
 
