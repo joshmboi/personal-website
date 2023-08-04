@@ -20,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/joshmboi/personal-website/issues"
   },
-  "homepage": "https://joshmboi.github.io/personal-website",
+  "homepage": "https://joshmboi.github.io/personal-website/#/",
   "dependencies": {
     "@tensorflow/tfjs": "^4.7.0",
     "@tensorflow/tfjs-core": "^4.8.0",

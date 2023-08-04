@@ -1,5 +1,6 @@
+import { StrictMode } from "react";
 import { createRoot } from "react-dom/client";
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createHashRouter, RouterProvider } from "react-router-dom";
 
 import "./main.scss";
 import App from "./components/app/app";
@@ -9,7 +10,7 @@ import Extracurriculars from "./components/extracurriculars/extracurriculars";
 import AwardsAndHonors from "./components/awards-and-honors/awards-and-honors";
 import Contact from "./components/contact/contact";
 
-const router = createBrowserRouter([
+const router = createHashRouter([
   {
     path: "/",
     element: <App />,
@@ -42,6 +43,8 @@ const domNode = document.getElementById("root")
 if (domNode !== null) {
   const root = createRoot(domNode)
   root.render(
-    <RouterProvider router={router} />
+    <StrictMode>
+      <RouterProvider router={ router } />
+    </StrictMode>
   )
 }
