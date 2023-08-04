@@ -36,7 +36,7 @@ const config: Configuration = {
   entry: './src/index.tsx',
   output: {
     path: path.resolve(__dirname, 'dist'),
-    publicPath: '/',
+    publicPath: 'https://joshmboi.github.io/personal-website/',
   },
   optimization: {
     minimize: isEnvProduction,
