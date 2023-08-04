@@ -4,10 +4,11 @@
   "description": "Joshua Boisvert's Personal Website",
   "private": true,
   "scripts": {
-    "start": "webpack serve --config webpack.config.ts --open --mode 'development'",
-    "build": "npm run clean:dist && webpack --config webpack.config.ts  --mode 'development'",
-    "deploy": "webpack --config webpack.config.ts --mode 'production'",
+    "build": "npm run clean:dist && webpack --config webpack.config.ts --mode 'production'",
+    "deploy": "gh-pages -d dist",
     "clean:dist": "rimraf dist",
+    "predeploy": "npm run build",
+    "start": "webpack serve --config webpack.config.ts --open --mode 'development'",
     "test": "npm test"
   },
   "repository": {
@@ -19,7 +20,7 @@
   "bugs": {
     "url": "https://github.com/joshmboi/personal-website/issues"
   },
-  "homepage": "https://github.com/joshmboi/personal-website#readme",
+  "homepage": "https://joshmboi.github.io/personal-website",
   "dependencies": {
     "@tensorflow/tfjs": "^4.7.0",
     "@tensorflow/tfjs-core": "^4.8.0",
@@ -54,6 +55,7 @@
     "eslint-plugin-react-hooks": "^4.6.0",
     "eslint-webpack-plugin": "^4.0.1",
     "fork-ts-checker-webpack-plugin": "^8.0.0",
+    "gh-pages": "^5.0.0",
     "html-webpack-plugin": "^5.5.3",
     "mini-css-extract-plugin": "^2.7.6",
     "prettier": "^2.8.8",
