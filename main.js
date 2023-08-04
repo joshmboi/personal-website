@@ -813,7 +813,7 @@ module.exports = __webpack_require__.p + "f23349285474e62ca5c6.jpg";
 /******/ 	
 /******/ 	/* webpack/runtime/publicPath */
 /******/ 	(() => {
-/******/ 		__webpack_require__.p = "/";
+/******/ 		__webpack_require__.p = "https://joshmboi.github.io/personal-website/";
 /******/ 	})();
 /******/ 	
 /************************************************************************/
